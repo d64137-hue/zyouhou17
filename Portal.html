@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【GAME PORTAL】カスタムゲームコレクション</title>
+    <style>
+        /* ベーススタイル */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* ダークな背景 */
+            color: #E0E0E0;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* タイトルをかっこよく */
+        h1 {
+            font-size: 3.5em;
+            color: #00FFFF; /* ネオンシアン */
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #007777;
+            margin-bottom: 50px;
+            letter-spacing: 5px;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.95; text-shadow: 0 0 8px #00FFFF, 0 0 18px #007777; }
+            100% { opacity: 1; }
+        }
+
+        /* ゲームリストのコンテナ */
+        #game-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* ゲームリンク（カード）のスタイル */
+        .game-card {
+            background-color: #1E1E1E;
+            border: 2px solid #333;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            width: 200px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none; /* リンクの下線を消す */
+            color: inherit;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px) scale(1.05); /* 浮き上がるアニメーション */
+            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.5); /* ネオンシャドウ */
+            border-color: #00FFFF;
+        }
+
+        .game-card h2 {
+            font-size: 1.5em;
+            color: #FF00FF; /* ネオンマゼンタ */
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #FF00FF;
+        }
+
+        .game-card p {
+            font-size: 0.9em;
+            color: #AAAAAA;
+        }
+
+        .game-card .emoji {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* フッター（あれば） */
+        footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        GAME ARCADE &lt;PORTAL&gt;
+    </h1>
+
+    <div id="game-list">
+        
+        <a href="問題１.html" class="game-card">
+            <h2>問題１</h2>
+        </a>
+
+        <a href="問題２.html" class="game-card">
+            <h2>問題２</h2>
+        </a>
+
+        <a href="問題３.html" class="game-card">
+            <h2>問題３</h2>
+        </a>
+
+        <a href="問題４.html" class="game-card">
+            <h2>問題４</h2>
+        </a>
+
+        <a href="問題５.html" class="game-card">
+            <h2>問題５</h2>
+        </a>
+        
+    </div>
+
+    <footer>
+        <p>&copy; Custom Game Collection Project</p>
+    </footer>
+
+</body>
+</html>
