@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            let n = 5000;
+            let m = 1500;
+            let Mscore = 0;
+            for(let i=1;i<=n;i++){
+                if(n%i==0 && m%i==0){
+                    Mscore = i
+                    }
+                }
+            document.write("今回の使用したnとmの値")
+            document.write("<br>" + "n = " + n + "<br>")
+                document.write("m = " + m + "<br>")
+            document.write("最大値は ")
+             document.write(Mscore);
+        </script>
+    </body>
+</html>
