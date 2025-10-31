@@ -1,19 +1,39 @@
 <html>
     <body>
         <script>
-            let n = 5000;
-            let m = 1500;
-            let Mscore = 0;
+            // 「n」「m」「最小公約数」を宣言
+            let n = 100;
+            let m = 1000;
+            let 最小公約数 = 0;
+            // 「i」を宣言しnに当てられた回数繰り返す
             for(let i=1;i<=n;i++){
+                /*
+                nをiで割った値が0かつmを1で割った値が0ならば
+                「最小公倍数」にiを代入
+                */
                 if(n%i==0 && m%i==0){
-                    Mscore = i
+                    最小公約数 = i
                     }
                 }
+            //　n,mの値の出力
             document.write("今回の使用したnとmの値")
             document.write("<br>" + "n = " + n + "<br>")
                 document.write("m = " + m + "<br>")
-            document.write("最大値は ")
-             document.write(Mscore);
+            /*
+            "最小公約数の値の出力"
+            最小公約数の値が１よりうえなら正常に動作
+            最小公約数の値が１よりうえでなく
+            最小公約数の値が１なら煽る
+            それ以外ならエラー
+            */
+            if(最小公約数 > 1){
+            document.write("最小公約数は ")
+             document.write(最小公約数);
+                }
+            else if(最小公約数==1){
+            document.write("最小公約数..." + 最小公約数 + "しかないけど大丈夫そ？")
+                }
+            else{document.write("なんかエラー起きてる気がする。詳しく調べてみて" + "<br>" + "今回の最小公約数の値" + " " + 最小公約数)}
         </script>
     </body>
 </html>
